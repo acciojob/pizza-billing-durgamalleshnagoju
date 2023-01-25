@@ -11,11 +11,16 @@ public class DeluxePizza  {
         this.isVeg = isVeg;
         // your code goes here
         if(isVeg){
-            this.price = 450;
+            this.price = 300;
             this.bill = "Base Price Of The Pizza: 450\n";
+            this.bill += "Extra Cheese Added: 80\n";
+            this.bill += "Extra Toppings Added: 70\n";
+            this.price = 450;
         } else {
+            this.bill = "Base Price Of The Pizza: 400\n";
+            this.bill += "Extra Cheese Added: 80\n";
+            this.bill += "Extra Toppings Added: 120\n";
             this.price = 600;
-            this.bill = "Base Price Of The Pizza: 600\n";
         }
     }
 
