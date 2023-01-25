@@ -6,6 +6,7 @@ public class DeluxePizza  {
     private boolean isVeg;
     private String bill;
     private boolean isAddTakeAway;
+    private boolean isBillGenerated;
 
     public DeluxePizza(Boolean isVeg) {
         this.isVeg = isVeg;
@@ -51,7 +52,12 @@ public class DeluxePizza  {
 
 
     public String getBill() {
-        bill += "Total Price: "+price+"\n";
-        return this.bill;
+        if(!isBillGenerated){
+            bill += "Total Price: "+price+"\n";
+            this.isBillGenerated = true;
+            return this.bill;
+
+        }
+        return "";
     }
 }
